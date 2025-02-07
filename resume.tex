@@ -1,0 +1,85 @@
+\documentclass[]{resume}
+
+\usepackage{amsmath}
+
+% Set applicant's personal data for header
+\name{Clayton R. Castro}
+\address{10982 Roebling Avenue, Unit 110 \linebreak Los Angeles CA 90024}
+\contacts{(951) 387-9310 \linebreak hello@claytonc.dev \linebreak Socials: claytonc.dev}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Product Engineer, Intern}{Rancher Government Solutions}{Fall 2022 -- Present}
+			Carbide Registry Portal
+			\begin{itemize}
+				\item Designed and implemented a REST API for interfacing with company products and thousands of container images. Fetches information from the company database as well as artifacts directly from the OCI registry.
+				\item Designed and implemented a frontend using Nuxt.js that consumes the aforementioned API. Enables customers to easily navigate the product catalog and download relevant artifacts from S3. Contains an advanced SBOM (Software Bill of Materials) viewer for all the container images in the company registry.
+                \item Securely containerized and designed Helm charts for the project. Oversaw deployment into production.
+			\end{itemize}
+            Carbide Account Provisioner
+            \begin{itemize}
+                \item Vue based frontend for CRUD operations on Harbor Registry robot accounts. Designed to enable the support engineering team in managing customer accounts. Built a secure container and Helm chart for such.
+            \end{itemize}
+			Releasebot
+			\begin{itemize}
+				\item Built an eventing daemon written in Go that watches specified Github repositories for releases. Can be configured to send custom HTTP payloads with information from said releases when triggered.
+                \item Securely containerized and designed a Helm chart for the project.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Recreation Leader/Lifeguard}{City of Murrieta}{Summer 2017 -- Fall 2022}	
+			\begin{itemize}
+				\item Handled day-to-day transactions and security
+				\item Oversaw pool and youth center activities to maintain a safe environment
+                \item Taught private and general swim lessons
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Los Angeles, CA}{University of California - Los Angeles}{Fall 2022 -- Spring 2025}
+            B.S in Computer Science
+			\begin{itemize}
+				\item Notable Coursework: Operating Systems Principles; Natural Language Processing; Programming Languages; Computer Network Fundamentals
+			\end{itemize}
+		\end{cvsubsection}
+        
+        \begin{cvsubsection}{Menifee, CA}{Mt. San Jacinto College}{Winter 2021 -- Spring 2022}
+            \begin{itemize}
+                \item Accolades: Dean's List, Honors Program Graduate
+                \item Notable Coursework: Linear Algebra, Computer Organization \& Assembly Language, Multivariable Calculus
+            \end{itemize}
+        \end{cvsubsection}
+    
+        \begin{cvsubsection}{Fort Worth, TX}{Texas Christian University}{Fall 2019 -- Spring 2020}
+            \begin{itemize}
+                \item Accolades: Dean's List, TCU Scholar
+                \item Notable Positions: Economics Club - Treasurer, D1 NCAA Cross Country and Track Team Athlete
+            \end{itemize}
+        \end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Technical Experience}
+		\begin{cvsubsection}{Projects}{}{}
+			\begin{itemize}
+                \item \textbf{Homelab} (2020 - Present) Self-hosted Kubernetes cluster on consumer-grade hardware - completely managed through GitOps via FluxCD. I use this cluster to test/deploy my own software as well as host a number of publicly facing services. \textit{https://github.com/clanktron/homelab}
+				\item \textbf{spdx-types} (2024) Typescript library for handling SBOM(s) in SPDX (Software Package Data Exchange) json format. \textit{https://github.com/clanktron/spdx-types}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item Languages: Go, Typescript/JavaScript, Lua, POSIX Shell, Fish Shell, C, C++, Python, SQL, Java, Ocaml, Assembly (x86, MIPS, RISC-V), Rust
+				\item Tooling: Linux, Git, Kubernetes, Docker, Vim, FluxCD, etc
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
