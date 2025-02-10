@@ -1,11 +1,12 @@
 \documentclass[]{resume}
 
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 % Set applicant's personal data for header
 \name{Clayton R. Castro}
 \address{10982 Roebling Avenue, Unit 110 \linebreak Los Angeles CA 90024}
-\contacts{(951) 387-9310 \linebreak hello@claytonc.dev \linebreak Socials: claytonc.dev}
+\contacts{(951) 387-9310 \linebreak hello@claytonc.dev \linebreak \href{https://claytonc.dev}{\textit{claytonc.dev}}}
 
 \begin{document}
 
@@ -17,33 +18,32 @@
 		\begin{cvsubsection}{Product Engineer, Intern}{Rancher Government Solutions}{Fall 2022 -- Present}
 			Carbide Registry Portal
 			\begin{itemize}
-				\item Designed and implemented a REST API for interfacing with company products and thousands of container images. Fetches information from the company database as well as artifacts directly from the OCI registry.
-				\item Designed and implemented a frontend using Nuxt.js that consumes the aforementioned API. Enables customers to easily navigate the product catalog and download relevant artifacts from S3. Contains an advanced SBOM (Software Bill of Materials) viewer for all the container images in the company registry.
-                \item Securely containerized and designed Helm charts for the project. Oversaw deployment into production.
+				\item Designed and implemented a Go-based REST API to manage the product database and thousands of OCI container images, enabling internal Tekton build pipelines and customer-facing applications.
+				\item Designed and implemented a Nuxt.js-based frontend to provide customers with an intuitive UI for browsing the product catalog and downloading S3 tarballs for air-gapped deployments. Includes a custom SBOM viewer for analyzing software package dependencies across all container images in the registry.
+                \item Securely containerized the application and developed an accompanying Helm chart; oversaw its successful production rollout.
 			\end{itemize}
             Carbide Account Provisioner
             \begin{itemize}
-                \item Vue based frontend for CRUD operations on Harbor Registry robot accounts. Designed to enable the support engineering team in managing customer accounts. Built a secure container and Helm chart for such.
+                \item Created a Vue-based frontend for managing Harbor registry robot accounts, improving efficiency for the support engineering team. Securely containerized the application and developed an accompanying Helm chart.
             \end{itemize}
 			Releasebot
 			\begin{itemize}
-				\item Built an eventing daemon written in Go that watches specified Github repositories for releases. Can be configured to send custom HTTP payloads with information from said releases when triggered.
-                \item Securely containerized and designed a Helm chart for the project.
+                \item Developed a Go-based event-driven daemon to monitor GitHub repositories for new releases, triggering \mbox{automated} internal build pipelines via custom HTTP payloads.
+                \item Securely containerized the application and developed an accompanying Helm chart.
 			\end{itemize}
 		\end{cvsubsection}
 		
 		\begin{cvsubsection}{Recreation Leader/Lifeguard}{City of Murrieta}{Summer 2017 -- Fall 2022}	
 			\begin{itemize}
-				\item Handled day-to-day transactions and security
-				\item Oversaw pool and youth center activities to maintain a safe environment
-                \item Taught private and general swim lessons
+				\item Oversaw pool/youth center activities while handling day-to-day transactions and security.
+                \item Taught private and general swim lessons for individuals of all ages.
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
 	
 	\begin{cvsection}{Education}
 		\begin{cvsubsection}{Los Angeles, CA}{University of California - Los Angeles}{Fall 2022 -- Spring 2025}
-            B.S in Computer Science
+            B.S. in Computer Science
 			\begin{itemize}
 				\item Notable Coursework: Operating Systems Principles; Natural Language Processing; Programming Languages; Computer Network Fundamentals
 			\end{itemize}
@@ -67,8 +67,8 @@
 	\begin{cvsection}{Technical Experience}
 		\begin{cvsubsection}{Projects}{}{}
 			\begin{itemize}
-                \item \textbf{Homelab} (2020 - Present) Self-hosted Kubernetes cluster on consumer-grade hardware - completely managed through GitOps via FluxCD. I use this cluster to test/deploy my own software as well as host a number of publicly facing services. \textit{https://github.com/clanktron/homelab}
-				\item \textbf{spdx-types} (2024) Typescript library for handling SBOM(s) in SPDX (Software Package Data Exchange) json format. \textit{https://github.com/clanktron/spdx-types}
+            \item \textbf{Homelab} (2020 - Present) Self-hosted Kubernetes cluster on consumer-grade hardware - completely managed through GitOps via FluxCD. I use this cluster to test/deploy my own software as well as host a number of publicly facing services. For currently deployed software see: \href{https://github.com/clanktron/homelab}{\textit{github.com/clanktron/homelab}}
+                \item \textbf{spdx-types} (2024) TypeScript library for handling SBOMs in SPDX (Software Package Data Exchange) json format. \href{https://github.com/clanktron/spdx-types}{\textit{github.com/clanktron/spdx-types}}
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
@@ -76,8 +76,8 @@
 	\begin{cvsection}{Languages and Technologies}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item Languages: Go, Typescript/JavaScript, Lua, POSIX Shell, Fish Shell, C, C++, Python, SQL, Java, Ocaml, Assembly (x86, MIPS, RISC-V), Rust
-				\item Tooling: Linux, Git, Kubernetes, Docker, Vim, FluxCD, etc
+				\item Languages: Go, TypeScript/JavaScript, Lua, POSIX Shell, Fish Shell, C, C++, Python, SQL, LaTeX, Java, Ocaml, Assembly (x86, MIPS, RISC-V), Rust
+				\item Tooling: Linux, Git, Kubernetes, Docker, Neovim/Vim, FluxCD, Crossplane, Terraform
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
